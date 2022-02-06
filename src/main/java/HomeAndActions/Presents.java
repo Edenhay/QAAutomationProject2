@@ -1,11 +1,11 @@
 package HomeAndActions;
 
-import Builder.*;
+import Builder.Base;
+import Builder.Reports;
+import Builder.Singleton;
 import com.aventstack.extentreports.Status;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
@@ -39,10 +39,10 @@ public class Presents extends Base {
     private static void getUrl() throws Exception {
         String pageUrl = driver.getCurrentUrl();
         Assert.assertEquals(pageUrl, PAGEURL);
+        Singleton.wait.until(ExpectedConditions.elementToBeClickable(By.id(GOLFANDCO))).click();
         Singleton.wait.until(ExpectedConditions.elementToBeClickable(By.id(GIFTCARDAMOUNT))).click();
-        sendKeysToElement(By.id(GIFTCARDAMOUNT) ,  INPUTAMOUNT)
+        sendKeysToElement(By.id(GIFTCARDAMOUNT) ,  INPUTAMOUNT);
         Reports.TakePicture();
-        Singleton.wait.until(ExpectedConditions.elementToBeClickable(By.id(GIFTCARD))).click();
         Singleton.wait.until(ExpectedConditions.elementToBeClickable(By.id(CHOOSE))).click();
     }
 }

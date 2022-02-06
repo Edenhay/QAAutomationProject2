@@ -8,7 +8,7 @@ public class Base {
         getWebElement(locator).click();
     }
 
-    public void sendKeysToElement(By locator, String text) throws Exception {
+    public static void sendKeysToElement(By locator, String text) throws Exception {
         getWebElement(locator).sendKeys(text);
     }
 
