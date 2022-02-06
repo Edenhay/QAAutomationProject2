@@ -13,10 +13,9 @@ import org.testng.Assert;
 
 public class Presents extends Base {
     private static final String PAGEURL = "https://buyme.co.il/search?budget=3&category=204&modal=login&region=9";
-    private static final String WAITFORELEMENT = "ember1751";
-    private static final String PIZZA = "ember1865";
-    private static final String SCROLLDOWN = "arguments[0].scrollIntoView(true);";
-    private static final String PIZZASELECT = "ember2034";
+    private static final String GOLFANDCO = "ember2947";
+    private static final String GIFTCARDAMOUNT = "ember3081";
+    private static final String CHOOSE = "ember3087";
     private static WebDriver driver;
 
     static {
@@ -41,11 +40,9 @@ public class Presents extends Base {
     private static void getUrl() throws Exception {
         String pageUrl = driver.getCurrentUrl();
         Assert.assertEquals(pageUrl, PAGEURL);
-        Singleton.wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(WAITFORELEMENT)));
-        WebElement pizzaa = driver.findElement(By.id(PIZZA));
-        ((JavascriptExecutor) driver).executeScript(SCROLLDOWN, pizzaa);
+        Singleton.wait.until(ExpectedConditions.elementToBeClickable(By.id(GIFTCARDAMOUNT))).click();
         Reports.TakePicture();
-        Singleton.wait.until(ExpectedConditions.elementToBeClickable(By.id(PIZZA))).click();
-        Singleton.wait.until(ExpectedConditions.elementToBeClickable(By.id(PIZZASELECT))).click();
+        Singleton.wait.until(ExpectedConditions.elementToBeClickable(By.id(GiftCard))).click();
+        Singleton.wait.until(ExpectedConditions.elementToBeClickable(By.id(CHOOSE))).click();
     }
 }
