@@ -25,9 +25,9 @@ public class Sending extends Builder.Base {
     private static final String PICKEMAIL = "ember3348";
     private static final String SENDKEYSEMAIL = "email";
     private static final String WHATEMAIL = "Edenhayute@gmail.com";
-    private static final String SENDERNAMEELEMENT = "ember2316";
+    private static final String SENDERNAMEELEMENT = "ember3368";
     private static final String SENDERNAME = "Eden Hayute";
-    private static final String ENDPROJECTCLICK = "ember2321";
+    private static final String ENDPROJECTCLICK = "ember3373";
 
     public static WebDriver driver;
 
