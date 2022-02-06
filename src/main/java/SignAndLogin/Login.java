@@ -20,13 +20,13 @@ public class Login extends Base {
         }
     }
 
-    private static final String REGISTER = "//*[@data-ember-action=\"990\"]";
-    private static final String REGISTERBTN = "//*[@data-ember-action=\"1698\"]";
-    private static final String FIRSTNAME = "//*[@id=\"ember1975\"]";
-    private static final String EMAIL = "//*[@id=\"ember1982\"]";
-    private static final String PASS = "//*[@id=\"valPass\"]";
-    private static final String PASSREPEAT = "//*[@id=\"ember1996\"]";
-    private static final String SIGNIN = "//*[@id=\"ember2002\"]/span";
+    private static final String REGISTER = "data-ember-action=\"990\";
+    private static final String REGISTERBTN = "data-ember-action=\"1698\";
+    private static final String FIRSTNAME = "ember1975";
+    private static final String EMAIL = "ember1982";
+    private static final String PASS = "valPass";
+    private static final String PASSREPEAT = "ember1996";
+    private static final String SIGNIN = "ember2002";
     private  static String MYNAME = "Eden";
     private static String MYEMAIL = "Edenhayute59@gmail.com";
     private static String MYPASS = "PASSWORD";
