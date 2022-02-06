@@ -10,17 +10,19 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
 public class Sending extends Builder.Base {
-    private static final String NAME = "ember2152";
+    private static final String SOMEONEELSE = "ember3208"
+    private static final String NAME = "ember3212";
     private static final String THISNAME = "Daniel Gotlib";
-    private static final String FORWHATEVENT = "ember2212";
-    private static final String INSULATION = "ember2247";
+    private static final String FORWHATEVENT = "ember3273";
+    private static final String THANKYOU = "ember3308";
     private static final String CLEARFIELD = "textarea-clear-all";
-    private static final String BLESSING = "parsley-success";
-    private static final String THISBLESSING = "Congrats! ";
-    private static final String UPLOADFILE = "ember2172";
-    private static final String FILEPATH = "C:\\Users\\עדן ח\\IdeaProjects\\Project\\src\\main\\java\\SeleniumProject.jpg";
-    private static final String PROCEDTOPAYMENT  = "ember2173";
-    private static final String PICKEMAIL = "#ember2296 > div:nth-child(2) > div.circle-area > svg";
+    private static final String BLESSING = "ember3223";
+    private static final String THISBLESSING = "THANKS! ";
+    private static final String UPLOADPHOTH = "ember3231";
+    private static final String FILEPATH = "C:\\Users\\עדן ח\\IdeaProjects\\Project\\src\\main\\java\\PICTURE.jpg";
+    private static final String PROCEDTOPAYMENT  = "ember3233";
+    private static final String NOWCHECK = "ember3339";
+    private static final String PICKEMAIL = "ember3348";
     private static final String SENDKEYSEMAIL = "email";
     private static final String WHATEMAIL = "Edenhayute@gmail.com";
     private static final String SENDERNAMEELEMENT = "ember2316";
@@ -52,16 +54,17 @@ public class Sending extends Builder.Base {
     }
 
     private static void FillDetails(){
+        Singleton.wait.until(ExpectedConditions.elementToBeClickable(By.id(SOMEONEELSE))).click();
         Singleton.wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(NAME))).sendKeys(THISNAME);
         Assert.assertEquals(driver.findElement(By.id(NAME)).getAttribute("value"), THISNAME);
         Singleton.wait.until(ExpectedConditions.elementToBeClickable(By.id(FORWHATEVENT))).click();
-        Singleton.wait.until(ExpectedConditions.elementToBeClickable(By.id(INSULATION))).click();
+        Singleton.wait.until(ExpectedConditions.elementToBeClickable(By.id(THANKYOU))).click();
         Singleton.wait.until(ExpectedConditions.elementToBeClickable(By.className(CLEARFIELD))).click();
-        Singleton.wait.until(ExpectedConditions.visibilityOfElementLocated(By.className(BLESSING))).sendKeys(THISBLESSING);
+        Singleton.wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(BLESSING))).sendKeys(THISBLESSING);
     }
 
     private static void UploadFile() throws Exception {
-        WebElement fileUpload = driver.findElement(By.id(UPLOADFILE));
+        WebElement fileUpload = driver.findElement(By.id(UPLOADPHOTH));
         fileUpload.sendKeys(FILEPATH);
         Singleton.wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#gift-step-1 > div.grid.pin-end.no-gap.top-xl > div.mx-12.top-md > div.grid.no-gap.bm-media-section > div.mx-auto.top-lr.bm-media-upload-thumbnail > div")));
         Reports.TakePicture();
@@ -72,7 +75,8 @@ public class Sending extends Builder.Base {
     }
 
     private static void SenderDetails() throws Exception {
-        Singleton.wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(PICKEMAIL))).click();
+        Singleton.wait.until(ExpectedConditions.elementToBeClickable(By.id(NOWCHECK))).click();NOWCHECK
+        Singleton.wait.until(ExpectedConditions.elementToBeClickable(By.id(PICKEMAIL))).click();
         Singleton.wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(SENDKEYSEMAIL))).sendKeys(WHATEMAIL);
         Singleton.wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(SENDERNAMEELEMENT))).sendKeys(SENDERNAME);
         Assert.assertEquals(driver.findElement(By.id(SENDERNAMEELEMENT) ).getAttribute("value") , SENDERNAME);
