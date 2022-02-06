@@ -35,7 +35,7 @@ public class Run {
     }
 
     @AfterClass
-    public static void ProjectEnd() throws Exception {
+    public static void finishProject() throws Exception {
         Reports.extent.flush();
         Singleton.getDriverInstance().quit();
     }
