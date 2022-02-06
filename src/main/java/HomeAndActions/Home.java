@@ -40,7 +40,7 @@ public class Home extends Base {
             throw new Exception("Test Failed");
         }
 
-        ClickToPresentScreen();
+        ClickFindMeAGift();
     }
 
     private static void homeScreenSelection() throws Exception {
@@ -52,7 +52,7 @@ public class Home extends Base {
         Singleton.wait.until(ExpectedConditions.elementToBeClickable(By.id(FAVORITES))).click();
     }
 
-    private static void ClickToPresentScreen(){
+    private static void ClickFindMeAGift(){
         Singleton.wait.until(ExpectedConditions.elementToBeClickable(By.id(FINDMESELECT))).click();
     }
 
