@@ -1,8 +1,6 @@
 package HomeAndActions;
 
-import Builder.Base;
-import Builder.Reports;
-import Builder.Singleton;
+import Builder.*;
 import com.aventstack.extentreports.Status;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
