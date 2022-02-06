@@ -42,7 +42,7 @@ public class Presents extends Base {
         Assert.assertEquals(pageUrl, PAGEURL);
         Singleton.wait.until(ExpectedConditions.elementToBeClickable(By.id(GIFTCARDAMOUNT))).click();
         Reports.TakePicture();
-        Singleton.wait.until(ExpectedConditions.elementToBeClickable(By.id(GiftCard))).click();
+        Singleton.wait.until(ExpectedConditions.elementToBeClickable(By.id(GIFTCARD))).click();
         Singleton.wait.until(ExpectedConditions.elementToBeClickable(By.id(CHOOSE))).click();
     }
 }
