@@ -18,8 +18,8 @@ public class Login extends Base {
         }
     }
 
-    private static final String REGISTER = "data-ember-action=\"990\";
-    private static final String REGISTERBTN = "data-ember-action=\"1698\";
+    private static final String REGISTER = "data-ember-action=990";
+    private static final String REGISTERBTN = "data-ember-action=1698";
     private static final String FIRSTNAME = "ember1975";
     private static final String EMAIL = "ember1982";
     private static final String PASS = "valPass";

@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
 public class Sending extends Builder.Base {
-    private static final String SOMEONEELSE = "ember3208"
+    private static final String SOMEONEELSE = "ember3208";
     private static final String NAME = "ember3212";
     private static final String THISNAME = "Daniel Gotlib";
     private static final String FORWHATEVENT = "ember3273";
@@ -75,7 +75,7 @@ public class Sending extends Builder.Base {
     }
 
     private static void SenderDetails() throws Exception {
-        Singleton.wait.until(ExpectedConditions.elementToBeClickable(By.id(NOWCHECK))).click();NOWCHECK
+        Singleton.wait.until(ExpectedConditions.elementToBeClickable(By.id(NOWCHECK))).click();
         Singleton.wait.until(ExpectedConditions.elementToBeClickable(By.id(PICKEMAIL))).click();
         Singleton.wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(SENDKEYSEMAIL))).sendKeys(WHATEMAIL);
         Singleton.wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(SENDERNAMEELEMENT))).sendKeys(SENDERNAME);

@@ -6,7 +6,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 
-\\\Creating XML file 
+///Creating XML file
 
 public class XMLBuilder {
     public static String getData (String keyName) throws Exception{
